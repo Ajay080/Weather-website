@@ -1,4 +1,4 @@
-console.log('Client side javascript is loaded')
+// console.log('Client side javascript is loaded')
 
 // fetch is a browser based api but its not accesssible in node js
 
