@@ -39,7 +39,9 @@ weatherform.addEventListener('submit',(e)=>{
     messageTwo.textContent=""
 
     // fetch('http://localhost:3000/weather?latitude=26.4499&longitude=80.3319').then((response)=>{
-    fetch('http://localhost:3000/weather?latitude='+location1+'&longitude='+location2).then((response)=>{
+    // fetch('http://localhost:3000/weather?latitude='+location1+'&longitude='+location2).then((response)=>{
+    fetch('/weather?latitude='+location1+'&longitude='+location2).then((response)=>{
+
     response.json().then((data)=>{
         if(data.error){
             messageOne.textContent=data.error
@@ -47,9 +49,9 @@ weatherform.addEventListener('submit',(e)=>{
         else{
             messageOne.textContent=data.location
             messageTwo.textContent=data.forecast
-            console.log(data.location)
-            console.log(data.forecast)
-            console.log('http://localhost:3000/weather?latitude='+location1+'&longitude='+location2)
+            // console.log(data.location)
+            // console.log(data.forecast)
+            // console.log('http://localhost:3000/weather?latitude='+location1+'&longitude='+location2)
         }
     })
 })

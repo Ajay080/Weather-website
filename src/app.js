@@ -12,6 +12,7 @@ console.log(path.join(__dirname,'../public'))
 
 
 const app = express()
+const port= process.env.PORT || 3000
 
 //define path for Express config
 const publicDirectoryPath=path.join(__dirname,'../public')
@@ -143,8 +144,8 @@ app.get('/weather',(req,res)=>{
 */
 
 //start the server up
-app.listen(3000,()=>{
-    console.log('Server is up on port 3000') // it not going to shpw on the user, it for checking it is running or not
+app.listen(port,()=>{
+    console.log('Server is up on port '+port) // it not going to shpw on the user, it for checking it is running or not
 })
 
 /*
